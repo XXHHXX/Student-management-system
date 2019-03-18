@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+html, body, .wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+.wrapper .header {
+    height: 70px;
+    line-height: 70px;
+    background-color: #354457;
+    /* z-index: 1000; */
+}
+.wrapper .header .logo {
+    width: 200px;
+    height: 70px;
+    padding-left: 20px;
+    color: #b3bcc5;
+    font-size: 14px;
+}
+.wrapper .header .logo img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+/* 左边菜单栏 */
+.wrapper .left-menu {
+    position: absolute;
+    width: 200px;
+    height: calc(100% - 70px);
+    left: 0;
+    top: 70px;
+    background-color: #4d5e70;
+}
+.left-menu dl{
+    color: #b3bcc5;
+}
+dl dt, dl dd {
+    height: 40px;
+    line-height: 40px;
+}
+dl dt {
+    padding-left: 8px;
+    font-weight: bold;
+}
+dl dd {
+    padding-left: 30px;
+    cursor: pointer;
+}
+dl dd:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #354457;
+}
+dl dd.active {
+    background-color: #ddd;
+    color: #354457;
+}
+
+
+.wrapper .right-content {
+    width: calc(100% - 200px);
+    height: calc(100% - 70px);
+    /* float: left; */
+    position: absolute;
+    left: 200px;
+    top: 70px;
+}
+/* 搜索框 */
+.search {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    padding: 0px 20px;
+    background-color: #eee;
+}
+.search label {
+    font-size: 16px;
+    color: #646987;
+    font-weight: 800;
+}
+
+.search input {
+    font-size: 16px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+.search-submit {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    outline: none;
+    display: inline-block;
+    border: none;
+    background-color: #354457;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    vertical-align: center;
+}
+.search-submit:hover {
+    background: #1e2936;
+}
+
+
+/*学生列表*/
+.student-list {
+    display: block;
+}
+.student-list table, .student-list table tr td, .student-list table tr th {
+    font-size: 14px;
+    text-align: center;
+}
+.student-list table {
+    width: 100%;
+}
+.student-list table thead {
+    background-color: #e3e8ee;
+}
+.student-list table tbody {
+    background-color: #fff;
+}
+table tr th {
+    color: #646987;
+}
+table tr td {
+    color: #354457;
+    min-width: 100px;
+}
+table tr th, table tr td {
+    padding: 10px 0;
+}
+
+table button.btn {
+    padding: 3px 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+table button.btn.add {
+    background-color: #5cb85c;
+}
+table button.btn.del {
+    background-color: #d9534f;
+}
+table button.btn.add:hover{
+    color: #fff;
+    background-color: #398439;
+    border-color: #255625;
+}
+table button.btn.del:hover {
+    color: #fff;
+    background-color: #c9302c;
+}
+/* 切换页面 */
+#turn-page {
+    margin: 20px;
+    float: right;
+}
+#turn-page li {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    color: #b3bcc5;
+    font-size: 14px;
+    cursor: pointer;
+}
+#turn-page li.cur-page {
+    background-color: #428bca;
+    border: 1px solid #428bca;
+    color: #fff;
+}
+
+/* 编辑学生信息界面 */
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* display: block; */
+}
+.model.show {
+    display: none;
+}
+.model .model-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    width: 500px;
+    height: 450px;
+    margin-left: -250px;
+    margin-top: -225px;
+    padding: 20px;
+}
+.model .model-content h3 {
+    font-size: 16px;
+    color: #b3bcc5;
+}
+
+/* 新增学生信息界面 */
+.content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.addStudentForm {
+    width: 400px;
+    margin: 50px auto;
+}
+.addStudentForm input, .addStudentForm label{
+    font-size: 16px;
+    color: #354457;
+}
+.addStudentForm label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+.addStudentForm div {
+    margin: 10px 0px;
+}
+.addStudentForm .btn {
+    padding: 5px 30px;
+}
+.addStudentForm .sex span {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #354457;
+}
+.addStudent {
+    display: none;
+}
+
