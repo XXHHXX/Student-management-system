@@ -142,7 +142,7 @@ function renderTable(data) {
     var str = '';
     data.forEach(function (ele, index) {
         str += '<tr>\
-                    < td >' + ele.sNo + '</td >\
+                    <td>' + ele.sNo + '</td>\
                     <td>' + ele.name + '</td>\
                     <td>' + (ele.sex ? '女' : '男') + '</td>\
                     <td>' + ele.email + '</td>\
